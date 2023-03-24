@@ -5,4 +5,4 @@ The write-ups here are from CTF events that I have competed in and challenges I 
 ## Table of Contents
 -------------------
 
-[Cyber Apocalypse 2023](Cyber-Apocalypse-2023)
+[Cyber Apocalypse 2023](Cyber-Apocalypse-2023/README.md)
