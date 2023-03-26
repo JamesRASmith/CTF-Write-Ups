@@ -60,3 +60,15 @@ ping 192.168.0.1; cat flag.txt
 This returned the following flag:
 
 **HTB{4lw4y5_54n1t1z3_u53r_1nput!!!}**
+
+## Challenge Remediation
+
+Despite my limited knowledge of programming in PHP, the below link that I used in the exploitation of this challenge also mentions ways in which PHP code can be hardened against this particular type of PHP injection.
+
+https://www.acunetix.com/websitesecurity/php-security-2/
+
+Reading the above link there are 2 methods mentioned for combatting this type of PHP exploit.
+
+One option is to make use of either 'escapeshellarg()' or 'escapeshellcmd()'. 'escapeshellcmd()' function will include a backslash before any characters in the users input that could be used to execute PHP injections. The function 'escapeshellarg()' can also be used, however this simply adds single quotes around a string and as a result the users input is passed as a single argument.
+
+Another option would be to disable the 'exec()', 'shellexec()', 'passthru()' and 'system()' functions in the PHP configuration. This removes the ability for the system to exploited through these functions entirely as they cannot be used.
